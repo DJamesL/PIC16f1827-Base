@@ -1,0 +1,6 @@
+_initialization: CODE, 19 0 44
+_main: CODE, 10 0 9
+_isr: CODE, 4 0 1
+_output_a: CODE, 63 0 4
+_output_b: CODE, 67 0 4
+Total: 62
