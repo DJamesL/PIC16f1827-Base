@@ -1853,9 +1853,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 [n S213 . . ]
 "2775 C:\Program Files (x86)\HI-TECH Software\PICC\9.81\include\pic16f1827.h
 [v _TOSHbits `VS213 1 e@4079 ]
-"3 D:\james\MyFiles\BASICIO\main.h
+"3 D:\james\MyFiles\BASICIO\PIC16f1827-Base\main.h
 [v _output_a `(v 0 ef1`i ]
-"4 D:\james\MyFiles\BASICIO\main.h
+"4 D:\james\MyFiles\BASICIO\PIC16f1827-Base\main.h
 [v _output_b `(v 0 ef1`i ]
 [p mainexit ]
 [; ;pic16f1827.h: 132: volatile unsigned char INDF0 @ 0x000;
@@ -3586,7 +3586,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;main.h: 4: void output_b(int porta);
 [; ;main.h: 3: void output_a(int porta);
 [; ;main.h: 4: void output_b(int porta);
-"5 D:\james\MyFiles\BASICIO\Peripheral_Initialization.h
+"5 D:\james\MyFiles\BASICIO\PIC16f1827-Base\Peripheral_Initialization.h
 [v _initialization `(v 1 ef ]
 {
 [; ;Peripheral_Initialization.h: 4: void initialization(void)
@@ -3644,12 +3644,12 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;Peripheral_Initialization.h: 45: output_b(0x00);
 "45
 [e ( _output_b (1 -> 0 `i ]
-[; ;Peripheral_Initialization.h: 47: TRISA = 0b00000100;
+[; ;Peripheral_Initialization.h: 47: TRISA = 0x00;
 "47
-[e = _TRISA -> -> 4 `i `uc ]
-[; ;Peripheral_Initialization.h: 48: TRISB = 0b00000011;
+[e = _TRISA -> -> 0 `i `uc ]
+[; ;Peripheral_Initialization.h: 48: TRISB = 0x00;
 "48
-[e = _TRISB -> -> 3 `i `uc ]
+[e = _TRISB -> -> 0 `i `uc ]
 [; ;Peripheral_Initialization.h: 50: }
 "50
 [e :UE 215 ]
@@ -3708,7 +3708,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;STDLIB.H: 146: extern char * utoa(char * buf, unsigned val, int base);
 [; ;STDLIB.H: 147: extern char * ltoa(char * buf, long val, int base);
 [; ;STDLIB.H: 148: extern char * ultoa(char * buf, unsigned long val, int base);
-"17 D:\james\MyFiles\BASICIO\main.c
+"17 D:\james\MyFiles\BASICIO\PIC16f1827-Base\main.c
 [; ;main.c: 17: asm("\tpsect config,class=CONFIG,delta=2"); asm("\tdw ""0xFFFF & 0xFFFF & 0xFFFF & 0xFFFF & 0xFFFC");
 [; 	psect config,class=CONFIG,delta=2 ;#
 [; 	dw 0xFFFF & 0xFFFF & 0xFFFF & 0xFFFF & 0xFFFC ;#
@@ -3735,68 +3735,56 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;main.c: 29: asm("clrwdt");
 "29
 [; clrwdt ;#
-[; ;main.c: 30: RA0 = 0b1;
-"30
-[e = _RA0 -> -> 1 `i `b ]
-[; ;main.c: 31: RA1 = 0b0;
 "31
-[e = _RA1 -> -> 0 `i `b ]
-[; ;main.c: 32: RA6 = 0b1;
-"32
-[e = _RA6 -> -> 1 `i `b ]
-[; ;main.c: 33: RA7 = 0b0;
-"33
-[e = _RA7 -> -> 0 `i `b ]
-"34
 }
 [e :U 221 ]
 "27
 [e $U 222  ]
 [e :U 223 ]
-[; ;main.c: 34: }
-[; ;main.c: 35: }
-"35
+[; ;main.c: 31: }
+[; ;main.c: 32: }
+"32
 [e :UE 220 ]
 }
-"39
+"36
 [v F2338 `(v 1 tf ]
 [v _isr `IF2338 1 e ]
 {
-[; ;main.c: 38: void interrupt isr(void)
-[; ;main.c: 39: {
+[; ;main.c: 35: void interrupt isr(void)
+[; ;main.c: 36: {
 [e :U _isr ]
 [f ]
-[; ;main.c: 41: }
-"41
+[; ;main.c: 38: }
+"38
 [e :UE 224 ]
 }
-"44
+"41
 [v _output_a `(v 1 ef1`i ]
 {
-[; ;main.c: 43: void output_a(int x)
-[; ;main.c: 44: {
+[; ;main.c: 40: void output_a(int x)
+[; ;main.c: 41: {
 [e :U _output_a ]
 [v _x `i 1 r1 ]
 [f ]
-[; ;main.c: 45: PORTA = x;
-"45
+[; ;main.c: 42: PORTA = x;
+"42
 [e = _PORTA -> _x `uc ]
-[; ;main.c: 46: }
-"46
+[; ;main.c: 43: }
+"43
 [e :UE 225 ]
 }
-"49
+"46
 [v _output_b `(v 1 ef1`i ]
 {
-[; ;main.c: 48: void output_b(int x)
-[; ;main.c: 49: {
+[; ;main.c: 45: void output_b(int x)
+[; ;main.c: 46: {
 [e :U _output_b ]
 [v _x `i 1 r1 ]
 [f ]
-[; ;main.c: 50: PORTB = x;
-"50
+[; ;main.c: 47: PORTB = x;
+"47
 [e = _PORTB -> _x `uc ]
-[; ;main.c: 51: }
-"51
+[; ;main.c: 48: }
+"48
 [e :UE 226 ]
 }

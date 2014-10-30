@@ -25,7 +25,7 @@ Linker command line:
   -ACONFIG=08007h-08008h -pconfig=CONFIG -DCONFIG=2 -AIDLOC=08000h-08003h \
   -pidloc=IDLOC -DIDLOC=2 -AEEDATA=00h-0FFh/0F000h -peeprom_data=EEDATA \
   -DEEDATA=2 -DCODE=2 -DSTRCODE=2 -DSTRING=2 -DCONST=2 -DENTRY=2 -k \
-  C:\Users\JAMESD~1\AppData\Local\Temp\s758.obj Standard.obj 
+  C:\Users\JAMESD~1\AppData\Local\Temp\s6i8.obj Standard.obj 
 
 Object code version is 3.10
 
@@ -34,13 +34,13 @@ Machine type is 16F1827
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-C:\Users\JAMESD~1\AppData\Local\Temp\s758.obj
+C:\Users\JAMESD~1\AppData\Local\Temp\s6i8.obj
                 end_init                              5        5        3        8       0
                 reset_vec                             0        0        2        0       0
 Standard.obj    intentry                              4        4        1        8       0
                 config                             8007     8007        2    1000E       0
                 cstackCOMMON                         70       70        2       70       1
-                cinit                                 8        8       3F        8       0
+                cinit                                 8        8       39        8       0
 
 TOTAL           Name                               Link     Load   Length     Space
         CLASS   CONST          
@@ -49,7 +49,7 @@ TOTAL           Name                               Link     Load   Length     Sp
                 end_init                              5        5        3         0
                 intentry                              4        4        1         0
                 reset_vec                             0        0        2         0
-                cinit                                 8        8       3F         0
+                cinit                                 8        8       39         0
 
         CLASS   STRCODE        
 
@@ -207,7 +207,7 @@ TOTAL           Name                               Link     Load   Length     Sp
 SEGMENTS        Name                           Load    Length   Top    Selector   Space  Class     Delta
 
                 reset_vec                      000000  000002  000002         0       0  CODE        2
-                intentry                       000004  000043  000047         8       0  CODE        2
+                intentry                       000004  00003D  000041         8       0  CODE        2
                 cstackCOMMON                   000070  000002  000072        70       1  COMMON      1
                 config                         008007  000002  008009     1000E       0  CONFIG      2
 
@@ -222,13 +222,13 @@ UNUSED ADDRESS RANGES
         BANK4            00220-0024F              30           1
         BIGRAM           02000-0216F             170           1
         CODE             00002-00003               2           2
-                         00047-00FFF             7B9
+                         00041-00FFF             7BF
         COMMON           00072-0007D               C           1
         CONST            00002-00003               2           2
-                         00047-00FFF             100
+                         00041-00FFF             100
         EEDATA           0F000-0F0FF             100           2
         ENTRY            00002-00003               2           2
-                         00047-00FFF             100
+                         00041-00FFF             100
         IDLOC            08000-08003               4           2
         RAM              00020-0006F              50           1
                          000A0-000EF              50
@@ -268,9 +268,9 @@ UNUSED ADDRESS RANGES
         SFR8             00400-0046F              70           1
         SFR9             00480-004EF              70           1
         STRCODE          00002-00003               2           2
-                         00047-00FFF             FB9
+                         00041-00FFF             FBF
         STRING           00002-00003               2           2
-                         00047-00FFF             100
+                         00041-00FFF             100
 
                                   Symbol Table
 
@@ -294,10 +294,6 @@ _PORTB                   (abs)        0000D
 _PR2                     (abs)        0001B
 _PSTR1CON                (abs)        00296
 _PSTR2CON                (abs)        0029D
-_RA0                     (abs)        00060
-_RA1                     (abs)        00061
-_RA6                     (abs)        00066
-_RA7                     (abs)        00067
 _SSP1MSK                 (abs)        00213
 _SSP2MSK                 (abs)        0021B
 _TMR0                    (abs)        00015
@@ -475,29 +471,29 @@ __Ltext                  text         00000
 __S0                     (abs)        08009
 __S1                     (abs)        00072
 __S2                     (abs)        00000
-__end_of_initialization  cinit        0003F
+__end_of_initialization  cinit        00039
 __end_of_isr             intentry     00005
-__end_of_main            cinit        00013
-__end_of_output_a        cinit        00043
-__end_of_output_b        cinit        00047
+__end_of_main            cinit        0000E
+__end_of_output_a        cinit        0003D
+__end_of_output_b        cinit        00041
 __pcstackCOMMON          cstackCOMMON 00070
 __pintentry              intentry     00004
 __pmaintext              cinit        0000A
-__ptext90                text90       00000
-__ptext91                cinit        00013
-__ptext92                cinit        00043
-__ptext93                cinit        0003F
+__ptext84                text84       00000
+__ptext85                cinit        0000E
+__ptext86                cinit        0003D
+__ptext87                cinit        00039
 __size_of_initialization (abs)        00000
 __size_of_isr            (abs)        00000
 __size_of_main           (abs)        00000
 __size_of_output_a       (abs)        00000
 __size_of_output_b       (abs)        00000
 _exit                    init         00005
-_initialization          cinit        00013
+_initialization          cinit        0000E
 _isr                     intentry     00004
 _main                    cinit        0000A
-_output_a                cinit        0003F
-_output_b                cinit        00043
+_output_a                cinit        00039
+_output_b                cinit        0003D
 btemp                    (abs)        0007E
 end_of_initialization    cinit        00008
 i1l1442                                    
@@ -534,10 +530,6 @@ l2625
 l2627                                      
 l2629                                      
 l2631                                      
-l2635                                      
-l2637                                      
-l2639                                      
-l2641                                      
 output_a@x               cstackCOMMON 00070
 output_b@x               cstackCOMMON 00070
 reset_vec                reset_vec    00000

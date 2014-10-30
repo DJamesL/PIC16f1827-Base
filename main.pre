@@ -1,5 +1,5 @@
 
-# 1 "D:\james\MyFiles\BASICIO\main.c"
+# 1 "D:\james\MyFiles\BASICIO\PIC16f1827-Base\main.c"
 
 # 132 "C:\Program Files (x86)\HI-TECH Software\PICC\9.81\include\pic16f1827.h"
 volatile unsigned char INDF0 @ 0x000;
@@ -2541,7 +2541,7 @@ extern unsigned char eeprom_read(unsigned char addr);
 #pragma inline(_delay)
 extern void _delay(unsigned long);
 
-# 3 "D:\james\MyFiles\BASICIO\main.h"
+# 3 "D:\james\MyFiles\BASICIO\PIC16f1827-Base\main.h"
 void output_a(int porta);
 void output_b(int porta);
 
@@ -2549,7 +2549,7 @@ void output_b(int porta);
 void output_a(int porta);
 void output_b(int porta);
 
-# 4 "D:\james\MyFiles\BASICIO\Peripheral_Initialization.h"
+# 4 "D:\james\MyFiles\BASICIO\PIC16f1827-Base\Peripheral_Initialization.h"
 void initialization(void)
 {
 
@@ -2587,8 +2587,8 @@ INTCONbits.TMR0IE = 0b1;
 output_a(0x00);
 output_b(0x00);
 
-TRISA = 0b00000100;
-TRISB = 0b00000011;
+TRISA = 0x00;
+TRISB = 0x00;
 
 }
 
@@ -2661,7 +2661,7 @@ extern char * utoa(char * buf, unsigned val, int base);
 extern char * ltoa(char * buf, long val, int base);
 extern char * ultoa(char * buf, unsigned long val, int base);
 
-# 17 "D:\james\MyFiles\BASICIO\main.c"
+# 17 "D:\james\MyFiles\BASICIO\PIC16f1827-Base\main.c"
 asm("\tpsect config,class=CONFIG,delta=2"); asm("\tdw ""0xFFFF & 0xFFFF & 0xFFFF & 0xFFFF & 0xFFFC");
 asm("\tpsect config,class=CONFIG,delta=2"); asm("\tdw ""0xFDFF & 0xFFFF & 0xFBFF & 0xFEFF & 0xDFFF");
 
@@ -2672,10 +2672,7 @@ initialization();
 while(1)
 {
 asm("clrwdt");
-RA0 = 0b1;
-RA1 = 0b0;
-RA6 = 0b1;
-RA7 = 0b0;
+
 }
 }
 

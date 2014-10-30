@@ -1,7 +1,3 @@
-_RA0 60 0 ABS
-_RA1 61 0 ABS
-_RA6 66 0 ABS
-_RA7 67 0 ABS
 _PR2 1B 0 ABS
 __S0 8009 0 ABS
 __S1 72 0 ABS
@@ -12,13 +8,13 @@ __pintentry 4 0 CODE
 _isr 4 0 CODE
 _TMR0 15 0 ABS
 _main A 0 CODE
-__end_of_initialization 3F 0 CODE
+__end_of_initialization 39 0 CODE
 btemp 7E 0 ABS
 ?_isr 70 0 COMMON
 _exit 5 0 CODE
 start 5 0 CODE
-_output_a 3F 0 CODE
-_output_b 43 0 CODE
+_output_a 39 0 CODE
+_output_b 3D 0 CODE
 _TRISA 8C 0 ABS
 _TRISB 8D 0 ABS
 _PORTA C 0 ABS
@@ -74,7 +70,7 @@ __Lcode 0 0 ABS
 ??_main 72 0 COMMON
 __Hinit 5 0 CODE
 __Linit 5 0 CODE
-__end_of_main 13 0 CODE
+__end_of_main E 0 CODE
 __Htext 0 0 ABS
 __Ltext 0 0 ABS
 end_of_initialization 8 0 CODE
@@ -152,7 +148,7 @@ __Hbank9 0 0 BANK9
 __Lbank9 0 0 BANK9
 __Hclrtext 0 0 ABS
 __Lclrtext 0 0 ABS
-_initialization 13 0 CODE
+_initialization E 0 CODE
 ??_initialization 72 0 COMMON
 __size_of_initialization 0 0 ABS
 __Hidloc 0 0 IDLOC
@@ -201,21 +197,21 @@ __Hbank18 0 0 BANK18
 __Lbank18 0 0 BANK18
 __Hbank28 0 0 BANK28
 __Lbank28 0 0 BANK28
-__ptext90 0 0 CODE
 __Hbank19 0 0 BANK19
 __Lbank19 0 0 BANK19
 __Hbank29 0 0 BANK29
 __Lbank29 0 0 BANK29
-__ptext91 13 0 CODE
-__ptext92 43 0 CODE
-__ptext93 3F 0 CODE
+__ptext84 0 0 CODE
+__ptext85 E 0 CODE
+__ptext86 3D 0 CODE
 _OSCCONbits 99 0 ABS
+__ptext87 39 0 CODE
 _WDTCONbits 97 0 ABS
 _INTCONbits B 0 ABS
 __Hend_init 8 0 CODE
 __Lend_init 5 0 CODE
-__end_of_output_a 43 0 CODE
-__end_of_output_b 47 0 CODE
+__end_of_output_a 3D 0 CODE
+__end_of_output_b 41 0 CODE
 __Hreset_vec 2 0 CODE
 __Lreset_vec 0 0 CODE
 _PSTR1CON 296 0 ABS
@@ -238,51 +234,47 @@ __pmaintext A 0 CODE
 ?_initialization 70 0 COMMON
 %segments
 reset_vec 0 3 CODE 0
-intentry 8 8D CODE 8
+intentry 8 81 CODE 8
 config 1000E 10011 CONFIG 1000E
 cstackCOMMON 70 71 COMMON 70
 %locals
 Standard.obj
-D:\james\MyFiles\BASICIO\main.c
+D:\james\MyFiles\BASICIO\PIC16f1827-Base\main.c
 17 8007 0 CONFIG
 18 8008 0 CONFIG
-C:\Users\JAMESD~1\AppData\Local\Temp\s758.
-118 8 0 CODE
-119 9 0 CODE
-D:\james\MyFiles\BASICIO\main.c
+C:\Users\JAMESD~1\AppData\Local\Temp\s6i8.
+110 8 0 CODE
+111 9 0 CODE
+D:\james\MyFiles\BASICIO\PIC16f1827-Base\main.c
 26 A 0 CODE
 29 C 0 CODE
-30 D 0 CODE
-31 F 0 CODE
-32 10 0 CODE
-33 11 0 CODE
-27 12 0 CODE
-35 13 0 CODE
-D:\james\MyFiles\BASICIO\Peripheral_Initialization.h
-8 13 0 CODE
-9 15 0 CODE
-10 19 0 CODE
-14 1D 0 CODE
-18 21 0 CODE
-19 23 0 CODE
-22 24 0 CODE
-31 26 0 CODE
-33 28 0 CODE
-34 2A 0 CODE
-35 2B 0 CODE
-36 2D 0 CODE
-37 2E 0 CODE
-39 30 0 CODE
-40 31 0 CODE
-44 32 0 CODE
-45 36 0 CODE
-47 39 0 CODE
-48 3C 0 CODE
-50 3E 0 CODE
-D:\james\MyFiles\BASICIO\main.c
-45 3F 0 CODE
-46 42 0 CODE
-50 43 0 CODE
-51 46 0 CODE
-39 4 0 CODE
-41 4 0 CODE
+27 D 0 CODE
+32 E 0 CODE
+D:\james\MyFiles\BASICIO\PIC16f1827-Base\Peripheral_Initialization.h
+8 E 0 CODE
+9 10 0 CODE
+10 14 0 CODE
+14 18 0 CODE
+18 1C 0 CODE
+19 1E 0 CODE
+22 1F 0 CODE
+31 21 0 CODE
+33 23 0 CODE
+34 25 0 CODE
+35 26 0 CODE
+36 28 0 CODE
+37 29 0 CODE
+39 2B 0 CODE
+40 2C 0 CODE
+44 2D 0 CODE
+45 31 0 CODE
+47 35 0 CODE
+48 37 0 CODE
+50 38 0 CODE
+D:\james\MyFiles\BASICIO\PIC16f1827-Base\main.c
+42 39 0 CODE
+43 3C 0 CODE
+47 3D 0 CODE
+48 40 0 CODE
+36 4 0 CODE
+38 4 0 CODE
