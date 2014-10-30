@@ -23,7 +23,17 @@ __CONFIG(STVREN_OFF & WRT_OFF & BORV_25 & PLLEN_OFF & LVP_OFF);
 
 void main(void)
 {
+	//****************************************
+	//disable watchdog timer here
+	
+	//****************************************
 	initialization();
+	
+
+	//****************************************
+	//enable watchdog timer here
+	
+	//****************************************
 	while(1)
 	{
 		CLRWDT();
