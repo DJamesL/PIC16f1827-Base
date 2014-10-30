@@ -1,0 +1,47 @@
+void _fn_Initializations(void)
+{
+
+    i16delay_AssertingRelease = K_Timer_800ms;
+    i16delay_Heartbeat_Duration = K_Timer_500ms;
+    i16delay_PSON_FaultRecycle_Validation = K_Timer_1s;
+    i16delay_PWRGOOD_Assertion = K_Timer_100ms;
+    //i16delay_ACOK_PSON_PWRGOOD_Deassertion = K_Timer_120ms;
+    i8delay_REGULATION_PWRGOOD_Deassertion = K_Timer_10ms;
+    i16delay_Output_Deassertion = K_Timer_2s;
+    i16delay_FanControlInterval = K_Timer_1s;
+    i16delay_Go_FanMonitoring = K_Timer_7s;
+    i16delay_ACRecovery = K_Timer_500ms;
+
+    i8delay_12V1_OCPValidation = K_Timer_20ms;
+    i8delay_12V2_OCPValidation = K_Timer_20ms;
+    i8delay_12V3_OCPValidation = K_Timer_20ms;
+    i8delay_12V4_OCPValidation = K_Timer_20ms;
+    i8delay_12V5_OCPValidation = K_Timer_10ms;
+    i8delay_12V6_OCPValidation = K_Timer_10ms;
+
+    i16var_CageAppliedPWMDuty = K_CageFanSoftStartThreshold;
+
+    i1_PS1_PWOK = 1;
+    i1_PS2_PWOK = 1;
+    //SSPSTAT_BF                      =  0;
+    //SSPCON_SSPOV                    =  0;
+    //SSPCON_CKP                      =  1;
+
+    i8_DutyCycleIncrement = ((K_CageFan_MaxDuty - 200) / (K_MaxRefLoadLevel - 1));
+
+
+}
+
+
+
+
+
+	//Leonard Elevich 12/17/08
+	OSCTUN=0;					// Tune FRC oscillator, if FRC is used
+
+//  Clock switching to incorporate PLL
+	__builtin_write_OSCCONH(0x01);			// Initiate Clock Switch to Internal
+											// FRC with PLL (NOSC=0b011)
+	__builtin_write_OSCCONL(0x01);			// Start clock switching
+	while (OSCCONbits.COSC != 0b001);		// Wait for Clock switch to occur	
+	while (OSCCONbits.LOCK != 1){};			// Wait for PLL to lock
