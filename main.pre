@@ -2570,9 +2570,7 @@ ANSELB = 0x00;
 
 OPTION_REG = 0x00;
 
-# 31
-TMR0 = 0x00;;
-
+# 32
 SSP1MSK = 0x00;
 SSP2MSK = 0x00;
 PSTR1CON = 0x00;
@@ -2583,9 +2581,6 @@ INTCONbits.GIE = 0b1;
 INTCONbits.TMR0IE = 0b1;
 
 
-
-output_a(0x00);
-output_b(0x00);
 
 TRISA = 0x00;
 TRISB = 0x00;
@@ -2662,13 +2657,20 @@ extern char * ltoa(char * buf, long val, int base);
 extern char * ultoa(char * buf, unsigned long val, int base);
 
 # 17 "D:\james\MyFiles\BASICIO\PIC16f1827-Base\main.c"
-asm("\tpsect config,class=CONFIG,delta=2"); asm("\tdw ""0xFFFF & 0xFFFF & 0xFFFF & 0xFFFF & 0xFFFC");
+asm("\tpsect config,class=CONFIG,delta=2"); asm("\tdw ""0xFFFF & 0xFFFF & 0xFFFF & 0xFFFF & 0xFFFC & MCLRE");
 asm("\tpsect config,class=CONFIG,delta=2"); asm("\tdw ""0xFDFF & 0xFFFF & 0xFBFF & 0xFEFF & 0xDFFF");
 
 # 24
 void main(void)
 {
+
+
+
+
 initialization();
+load_default_value();
+
+# 37
 while(1)
 {
 asm("clrwdt");

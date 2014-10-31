@@ -14,7 +14,7 @@
 
 
 //__PIC16F1827__
-__CONFIG(CP_OFF & CPD_OFF & WDTE_ON & BOREN_ON & FOSC_INTOSC);
+__CONFIG(CP_OFF & CPD_OFF & WDTE_ON & BOREN_ON & FOSC_INTOSC & MCLRE);
 __CONFIG(STVREN_OFF & WRT_OFF & BORV_25 & PLLEN_OFF & LVP_OFF);
 //
 
@@ -28,7 +28,7 @@ void main(void)
 	
 	//****************************************
 	initialization();
-	
+	load_default_value();
 
 	//****************************************
 	//enable watchdog timer here

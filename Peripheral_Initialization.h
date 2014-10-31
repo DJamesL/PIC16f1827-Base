@@ -28,7 +28,6 @@ OPTION_REGbits.PS = 0b110; //prescaler 1:128
 */
 
 
-TMR0 = INIT_TMR0;
 
 SSP1MSK	=	0x00;
 SSP2MSK	=	0x00;
@@ -40,9 +39,6 @@ INTCONbits.GIE = 0b1; //global interrupt ON
 INTCONbits.TMR0IE = 0b1; //TMR0 overflow ON
 
 //Port/pins directions
-
-output_a(INIT_PORTA);
-output_b(INIT_PORTB);
 
 TRISA = TRISA_CONFIG;
 TRISB = TRISB_CONFIG;
