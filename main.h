@@ -2,6 +2,7 @@
 
 void output_a(int porta);// CCS C like 
 void output_b(int porta);// CCS C like 
+void load_default_values(void);
 //void output_c(int porta);
 //void output_d(int porta); 
 

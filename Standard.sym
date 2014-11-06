@@ -6,15 +6,14 @@ __Hintentry 5 0 CODE
 __Lintentry 4 0 CODE
 __pintentry 4 0 CODE
 _isr 4 0 CODE
-_TMR0 15 0 ABS
 _main A 0 CODE
-__end_of_initialization 39 0 CODE
+__end_of_initialization 36 0 CODE
 btemp 7E 0 ABS
 ?_isr 70 0 COMMON
 _exit 5 0 CODE
 start 5 0 CODE
-_output_a 39 0 CODE
-_output_b 3D 0 CODE
+_output_a 3E 0 CODE
+_output_b 42 0 CODE
 _TRISA 8C 0 ABS
 _TRISB 8D 0 ABS
 _PORTA C 0 ABS
@@ -23,6 +22,7 @@ _PORTB D 0 ABS
 wtemp0 7E 0 ABS
 __Hconfig 8009 0 CONFIG
 __Lconfig 8007 0 CONFIG
+__end_of_load_default_values 3E 0 CODE
 __Hbigram 0 0 ABS
 __Lbigram 0 0 ABS
 __Hram 0 0 ABS
@@ -52,6 +52,7 @@ __Lsfr1 0 0 ABS
 __Hsfr2 0 0 ABS
 __Lsfr2 0 0 ABS
 __Hsfr3 0 0 ABS
+__ptext100 3E 0 CODE
 __Lsfr3 0 0 ABS
 __Hsfr4 0 0 ABS
 __Lsfr4 0 0 ABS
@@ -67,10 +68,11 @@ __Hsfr9 0 0 ABS
 __Lsfr9 0 0 ABS
 __Hcode 0 0 ABS
 __Lcode 0 0 ABS
+__size_of_load_default_values 0 0 ABS
 ??_main 72 0 COMMON
 __Hinit 5 0 CODE
 __Linit 5 0 CODE
-__end_of_main E 0 CODE
+__end_of_main 14 0 CODE
 __Htext 0 0 ABS
 __Ltext 0 0 ABS
 end_of_initialization 8 0 CODE
@@ -146,13 +148,15 @@ __Hbank8 0 0 BANK8
 __Lbank8 0 0 BANK8
 __Hbank9 0 0 BANK9
 __Lbank9 0 0 BANK9
+?_load_default_values 70 0 COMMON
 __Hclrtext 0 0 ABS
 __Lclrtext 0 0 ABS
-_initialization E 0 CODE
-??_initialization 72 0 COMMON
+_initialization 14 0 CODE
+??_initialization 70 0 COMMON
 __size_of_initialization 0 0 ABS
 __Hidloc 0 0 IDLOC
 __Lidloc 0 0 IDLOC
+??_load_default_values 72 0 COMMON
 __end_of_isr 5 0 CODE
 __Hcinit 0 0 ABS
 __Lcinit 0 0 ABS
@@ -201,17 +205,17 @@ __Hbank19 0 0 BANK19
 __Lbank19 0 0 BANK19
 __Hbank29 0 0 BANK29
 __Lbank29 0 0 BANK29
-__ptext84 0 0 CODE
-__ptext85 E 0 CODE
-__ptext86 3D 0 CODE
+__ptext96 0 0 CODE
 _OSCCONbits 99 0 ABS
-__ptext87 39 0 CODE
 _WDTCONbits 97 0 ABS
 _INTCONbits B 0 ABS
+__ptext97 36 0 CODE
 __Hend_init 8 0 CODE
 __Lend_init 5 0 CODE
-__end_of_output_a 3D 0 CODE
-__end_of_output_b 41 0 CODE
+__ptext98 14 0 CODE
+__ptext99 42 0 CODE
+__end_of_output_a 42 0 CODE
+__end_of_output_b 46 0 CODE
 __Hreset_vec 2 0 CODE
 __Lreset_vec 0 0 CODE
 _PSTR1CON 296 0 ABS
@@ -232,49 +236,55 @@ __Hmaintext 0 0 ABS
 __Lmaintext 0 0 ABS
 __pmaintext A 0 CODE
 ?_initialization 70 0 COMMON
+_load_default_values 36 0 CODE
 %segments
 reset_vec 0 3 CODE 0
-intentry 8 81 CODE 8
+intentry 8 8B CODE 8
 config 1000E 10011 CONFIG 1000E
 cstackCOMMON 70 71 COMMON 70
 %locals
 Standard.obj
-D:\james\MyFiles\BASICIO\PIC16f1827-Base\main.c
-17 8007 0 CONFIG
-18 8008 0 CONFIG
-C:\Users\JAMESD~1\AppData\Local\Temp\s6i8.
-110 8 0 CODE
-111 9 0 CODE
-D:\james\MyFiles\BASICIO\PIC16f1827-Base\main.c
-26 A 0 CODE
-29 C 0 CODE
-27 D 0 CODE
-32 E 0 CODE
-D:\james\MyFiles\BASICIO\PIC16f1827-Base\Peripheral_Initialization.h
-8 E 0 CODE
-9 10 0 CODE
-10 14 0 CODE
-14 18 0 CODE
-18 1C 0 CODE
-19 1E 0 CODE
-22 1F 0 CODE
-31 21 0 CODE
-33 23 0 CODE
-34 25 0 CODE
-35 26 0 CODE
-36 28 0 CODE
-37 29 0 CODE
-39 2B 0 CODE
-40 2C 0 CODE
-44 2D 0 CODE
-45 31 0 CODE
-47 35 0 CODE
-48 37 0 CODE
-50 38 0 CODE
-D:\james\MyFiles\BASICIO\PIC16f1827-Base\main.c
-42 39 0 CODE
-43 3C 0 CODE
-47 3D 0 CODE
-48 40 0 CODE
-36 4 0 CODE
-38 4 0 CODE
+D:\james\MyFiles\GIT\PIC16F1827\PIC16f1827-Base\main.c
+20 8007 0 CONFIG
+21 8008 0 CONFIG
+C:\Users\JAMESD~1\AppData\Local\Temp\s77c.
+109 8 0 CODE
+110 9 0 CODE
+D:\james\MyFiles\GIT\PIC16F1827\PIC16f1827-Base\main.c
+31 A 0 CODE
+33 C 0 CODE
+34 E 0 CODE
+38 10 0 CODE
+42 12 0 CODE
+40 13 0 CODE
+45 14 0 CODE
+D:\james\MyFiles\GIT\PIC16F1827\PIC16f1827-Base\Peripheral_Initialization.h
+8 14 0 CODE
+9 16 0 CODE
+10 1A 0 CODE
+14 1E 0 CODE
+18 22 0 CODE
+19 24 0 CODE
+22 25 0 CODE
+32 27 0 CODE
+33 29 0 CODE
+34 2A 0 CODE
+35 2C 0 CODE
+36 2D 0 CODE
+38 2F 0 CODE
+39 30 0 CODE
+43 31 0 CODE
+44 34 0 CODE
+46 35 0 CODE
+D:\james\MyFiles\GIT\PIC16F1827\PIC16f1827-Base\default_values.h
+8 36 0 CODE
+9 3B 0 CODE
+10 3E 0 CODE
+D:\james\MyFiles\GIT\PIC16F1827\PIC16f1827-Base\functions.c
+6 3E 0 CODE
+7 41 0 CODE
+11 42 0 CODE
+12 45 0 CODE
+D:\james\MyFiles\GIT\PIC16F1827\PIC16f1827-Base\main.c
+49 4 0 CODE
+51 4 0 CODE

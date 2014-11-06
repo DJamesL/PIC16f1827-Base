@@ -1853,11 +1853,6 @@ Version 3.2 HI-TECH Software Intermediate Code
 [n S213 . . ]
 "2775 C:\Program Files (x86)\HI-TECH Software\PICC\9.81\include\pic16f1827.h
 [v _TOSHbits `VS213 1 e@4079 ]
-"3 D:\james\MyFiles\GIT\PIC16F1827\PIC16f1827-Base\main.h
-[v _output_a `(v 0 ef1`i ]
-"4 D:\james\MyFiles\GIT\PIC16F1827\PIC16f1827-Base\main.h
-[v _output_b `(v 0 ef1`i ]
-[p mainexit ]
 [; ;pic16f1827.h: 132: volatile unsigned char INDF0 @ 0x000;
 [; ;pic16f1827.h: 136: volatile unsigned char INDF1 @ 0x001;
 [; ;pic16f1827.h: 140: volatile unsigned char PCL @ 0x002;
@@ -3577,203 +3572,33 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;pic16f1827.h: 2773: unsigned TOSH : 7;
 [; ;pic16f1827.h: 2774: };
 [; ;pic16f1827.h: 2775: } TOSHbits @ 0xFEF;
-[; ;pic.h: 22: extern void _nop(void);
-[; ;pic.h: 74: extern unsigned int flash_read(unsigned short addr);
-[; ;eeprom_routines.h: 41: extern void eeprom_write(unsigned char addr, unsigned char value);
-[; ;eeprom_routines.h: 42: extern unsigned char eeprom_read(unsigned char addr);
-[; ;pic.h: 148: extern void _delay(unsigned long);
-[; ;main.h: 3: void output_a(int porta);
-[; ;main.h: 4: void output_b(int porta);
-[; ;main.h: 5: void load_default_values(void);
-"4 D:\james\MyFiles\GIT\PIC16F1827\PIC16f1827-Base\default_values.h
-[v _load_default_values `(v 1 ef ]
+"5 D:\james\MyFiles\GIT\PIC16F1827\PIC16f1827-Base\functions.c
+[v _output_a `(v 1 ef1`i ]
 {
-[; ;default_values.h: 3: void load_default_values(void)
-[; ;default_values.h: 4: {
-[e :U _load_default_values ]
+[; ;functions.c: 4: void output_a(int x)
+[; ;functions.c: 5: {
+[e :U _output_a ]
+[v _x `i 1 r1 ]
 [f ]
-[; ;default_values.h: 8: output_a(0x02);
-"8
-[e ( _output_a (1 -> 2 `i ]
-[; ;default_values.h: 9: output_b(0x00);
-"9
-[e ( _output_b (1 -> 0 `i ]
-[; ;default_values.h: 10: }
-"10
+[; ;functions.c: 6: PORTA = x;
+"6
+[e = _PORTA -> _x `uc ]
+[; ;functions.c: 7: }
+"7
 [e :UE 215 ]
 }
-[; ;main.h: 3: void output_a(int porta);
-[; ;main.h: 4: void output_b(int porta);
-[; ;main.h: 5: void load_default_values(void);
-"5 D:\james\MyFiles\GIT\PIC16F1827\PIC16f1827-Base\Peripheral_Initialization.h
-[v _initialization `(v 1 ef ]
-{
-[; ;Peripheral_Initialization.h: 4: void initialization(void)
-[; ;Peripheral_Initialization.h: 5: {
-[e :U _initialization ]
-[f ]
-[; ;Peripheral_Initialization.h: 8: OSCCONbits.SPLLEN = 0b1;
-"8
-[e = . . _OSCCONbits 0 7 -> -> 1 `i `uc ]
-[; ;Peripheral_Initialization.h: 9: OSCCONbits.SCS = 0b10;
-"9
-[e = . . _OSCCONbits 1 0 -> -> 2 `i `uc ]
-[; ;Peripheral_Initialization.h: 10: OSCCONbits.IRCF = 0b1110;
 "10
-[e = . . _OSCCONbits 1 2 -> -> 14 `i `uc ]
-[; ;Peripheral_Initialization.h: 14: WDTCONbits.WDTPS = 0x09;
-"14
-[e = . . _WDTCONbits 1 1 -> -> 9 `i `uc ]
-[; ;Peripheral_Initialization.h: 18: ANSELA = 0x00;
-"18
-[e = _ANSELA -> -> 0 `i `uc ]
-[; ;Peripheral_Initialization.h: 19: ANSELB = 0x00;
-"19
-[e = _ANSELB -> -> 0 `i `uc ]
-[; ;Peripheral_Initialization.h: 22: OPTION_REG = 0x00;
-"22
-[e = _OPTION_REG -> -> 0 `i `uc ]
-[; ;Peripheral_Initialization.h: 32: SSP1MSK = 0x00;
-"32
-[e = _SSP1MSK -> -> 0 `i `uc ]
-[; ;Peripheral_Initialization.h: 33: SSP2MSK = 0x00;
-"33
-[e = _SSP2MSK -> -> 0 `i `uc ]
-[; ;Peripheral_Initialization.h: 34: PSTR1CON = 0x00;
-"34
-[e = _PSTR1CON -> -> 0 `i `uc ]
-[; ;Peripheral_Initialization.h: 35: PSTR2CON = 0x00;
-"35
-[e = _PSTR2CON -> -> 0 `i `uc ]
-[; ;Peripheral_Initialization.h: 36: PR2 = 0x00;
-"36
-[e = _PR2 -> -> 0 `i `uc ]
-[; ;Peripheral_Initialization.h: 38: INTCONbits.GIE = 0b1;
-"38
-[e = . . _INTCONbits 0 7 -> -> 1 `i `uc ]
-[; ;Peripheral_Initialization.h: 39: INTCONbits.TMR0IE = 0b1;
-"39
-[e = . . _INTCONbits 0 5 -> -> 1 `i `uc ]
-[; ;Peripheral_Initialization.h: 43: TRISA = 0x02;
-"43
-[e = _TRISA -> -> 2 `i `uc ]
-[; ;Peripheral_Initialization.h: 44: TRISB = 0x00;
-"44
-[e = _TRISB -> -> 0 `i `uc ]
-[; ;Peripheral_Initialization.h: 46: }
-"46
+[v _output_b `(v 1 ef1`i ]
+{
+[; ;functions.c: 9: void output_b(int x)
+[; ;functions.c: 10: {
+[e :U _output_b ]
+[v _x `i 1 r1 ]
+[f ]
+[; ;functions.c: 11: PORTB = x;
+"11
+[e = _PORTB -> _x `uc ]
+[; ;functions.c: 12: }
+"12
 [e :UE 216 ]
-}
-[; ;STDLIB.H: 4: typedef int ptrdiff_t;
-[; ;STDLIB.H: 5: typedef unsigned size_t;
-[; ;STDLIB.H: 6: typedef unsigned short wchar_t;
-[; ;STDLIB.H: 16: extern int errno;
-[; ;STDLIB.H: 27: typedef struct {
-[; ;STDLIB.H: 28: int rem;
-[; ;STDLIB.H: 29: int quot;
-[; ;STDLIB.H: 30: } div_t;
-[; ;STDLIB.H: 31: typedef struct {
-[; ;STDLIB.H: 32: unsigned rem;
-[; ;STDLIB.H: 33: unsigned quot;
-[; ;STDLIB.H: 34: } udiv_t;
-[; ;STDLIB.H: 35: typedef struct {
-[; ;STDLIB.H: 36: long quot;
-[; ;STDLIB.H: 37: long rem;
-[; ;STDLIB.H: 38: } ldiv_t;
-[; ;STDLIB.H: 39: typedef struct {
-[; ;STDLIB.H: 40: unsigned long quot;
-[; ;STDLIB.H: 41: unsigned long rem;
-[; ;STDLIB.H: 42: } uldiv_t;
-[; ;STDLIB.H: 65: extern double atof(const char *);
-[; ;STDLIB.H: 66: extern double strtod(const char *, const char **);
-[; ;STDLIB.H: 67: extern int atoi(const char *);
-[; ;STDLIB.H: 68: extern unsigned xtoi(const char *);
-[; ;STDLIB.H: 69: extern long atol(const char *);
-[; ;STDLIB.H: 70: extern long strtol(const char *, char **, int);
-[; ;STDLIB.H: 72: extern int rand(void);
-[; ;STDLIB.H: 73: extern void srand(unsigned int);
-[; ;STDLIB.H: 74: extern void * calloc(size_t, size_t);
-[; ;STDLIB.H: 75: extern div_t div(int numer, int denom);
-[; ;STDLIB.H: 76: extern udiv_t udiv(unsigned numer, unsigned denom);
-[; ;STDLIB.H: 77: extern ldiv_t ldiv(long numer, long denom);
-[; ;STDLIB.H: 78: extern uldiv_t uldiv(unsigned long numer,unsigned long denom);
-[; ;STDLIB.H: 79: extern unsigned long _lrotl(unsigned long value, unsigned int shift);
-[; ;STDLIB.H: 80: extern unsigned long _lrotr(unsigned long value, unsigned int shift);
-[; ;STDLIB.H: 81: extern unsigned int _rotl(unsigned int value, unsigned int shift);
-[; ;STDLIB.H: 82: extern unsigned int _rotr(unsigned int value, unsigned int shift);
-[; ;STDLIB.H: 106: extern void * malloc(size_t);
-[; ;STDLIB.H: 107: extern void free(void *);
-[; ;STDLIB.H: 108: extern void * realloc(void *, size_t);
-[; ;STDLIB.H: 122: extern void abort(void);
-[; ;STDLIB.H: 123: extern void exit(int);
-[; ;STDLIB.H: 124: extern int atexit(void (*)(void));
-[; ;STDLIB.H: 125: extern char * getenv(const char *);
-[; ;STDLIB.H: 126: extern char ** environ;
-[; ;STDLIB.H: 127: extern int system(char *);
-[; ;STDLIB.H: 128: extern void qsort(void *, size_t, size_t, int (*)(const void *, const void *));
-[; ;STDLIB.H: 129: extern void * bsearch(const void *, void *, size_t, size_t, int(*)(const void *, const void *));
-[; ;STDLIB.H: 130: extern int abs(int);
-[; ;STDLIB.H: 131: extern long labs(long);
-[; ;STDLIB.H: 145: extern char * itoa(char * buf, int val, int base);
-[; ;STDLIB.H: 146: extern char * utoa(char * buf, unsigned val, int base);
-[; ;STDLIB.H: 147: extern char * ltoa(char * buf, long val, int base);
-[; ;STDLIB.H: 148: extern char * ultoa(char * buf, unsigned long val, int base);
-"20 D:\james\MyFiles\GIT\PIC16F1827\PIC16f1827-Base\main.c
-[; ;main.c: 20: asm("\tpsect config,class=CONFIG,delta=2"); asm("\tdw ""0xFFFF & 0xFFFF & 0xFFFF & 0xFFFF & 0xFFFF & 0xFFFC");
-[; 	psect config,class=CONFIG,delta=2 ;#
-[; 	dw 0xFFFF & 0xFFFF & 0xFFFF & 0xFFFF & 0xFFFF & 0xFFFC ;#
-"21
-[; ;main.c: 21: asm("\tpsect config,class=CONFIG,delta=2"); asm("\tdw ""0xFDFF & 0xFFFF & 0xFBFF & 0xFEFF & 0xDFFF");
-[; 	psect config,class=CONFIG,delta=2 ;#
-[; 	dw 0xFDFF & 0xFFFF & 0xFBFF & 0xFEFF & 0xDFFF ;#
-"28
-[v _main `(v 1 ef ]
-{
-[; ;main.c: 27: void main(void)
-[; ;main.c: 28: {
-[e :U _main ]
-[f ]
-[; ;main.c: 31: WDTCONbits.SWDTEN = 0;
-"31
-[e = . . _WDTCONbits 0 0 -> -> 0 `i `uc ]
-[; ;main.c: 33: initialization();
-"33
-[e ( _initialization ..  ]
-[; ;main.c: 34: load_default_values();
-"34
-[e ( _load_default_values ..  ]
-[; ;main.c: 38: WDTCONbits.SWDTEN = 1;
-"38
-[e = . . _WDTCONbits 0 0 -> -> 1 `i `uc ]
-[; ;main.c: 40: while(1)
-"40
-[e :U 223 ]
-[; ;main.c: 41: {
-"41
-{
-[; ;main.c: 42: asm("clrwdt");
-"42
-[; clrwdt ;#
-"44
-}
-[e :U 222 ]
-"40
-[e $U 223  ]
-[e :U 224 ]
-[; ;main.c: 44: }
-[; ;main.c: 45: }
-"45
-[e :UE 221 ]
-}
-"49
-[v F2342 `(v 1 tf ]
-[v _isr `IF2342 1 e ]
-{
-[; ;main.c: 48: void interrupt isr(void)
-[; ;main.c: 49: {
-[e :U _isr ]
-[f ]
-[; ;main.c: 51: }
-"51
-[e :UE 225 ]
 }
